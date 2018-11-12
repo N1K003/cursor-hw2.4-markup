@@ -1,18 +1,22 @@
 $margin: 5px;
-$tablet-width: 1200px;
-$phone-width: 1000px;
+$tablet-width: 1000px;
+$phone-width: 700px;
 
 .page {
-  width: 1600px;
+  width: 80%;
   height: 600px;
   display: flex;
   flex-direction: column;
+  .text-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
   .title {
     display: flex;
-    justify-content: space-between;
+    justify-content: start;
     background: lightblue;
     height: 60px;
-    width: 1490px;
     margin: $margin;
     .title-item {
       display: flex;
@@ -28,29 +32,23 @@ $phone-width: 1000px;
   .main {
     $bgc: lightgray;
     $height: 150px;
-    width: 1500px;
     display: flex;
-    justify-content: space-between;
-    .text-center {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
+    justify-content: space-around;
     .left {
       height: $height;
-      width: 300px;
+      width: 20%;
       background: $bgc;
       margin: $margin;
     }
     .center {
       height: $height;
-      width: 900px;
+      width: 60%;
       background: $bgc;
       margin: $margin;
     }
     .right {
       height: $height;
-      width: 300px;
+      width: 20%;
       background: $bgc;
       margin: $margin;
     }
@@ -59,15 +57,18 @@ $phone-width: 1000px;
 
 @media screen and (max-width: $tablet-width) {
   .page {
-    width: $tablet-width;
     .title {
-      width: $tablet-width - 10;
       .left-menu {
         display: inline;
       }
     }
     .main {
-      width: $tablet-width;
+      .left {
+        width: 30%;
+      }
+      .center {
+        width: 70%;
+      }
       .right {
         display: none;
       }
@@ -77,20 +78,23 @@ $phone-width: 1000px;
 
 @media screen and (max-width: $phone-width) {
   .page {
-    width: $phone-width;
     .title {
-      width: $phone-width - 100;
+      justify-content: space-between;
       .left-menu {
+        width: 20%;
         display: inline;
       }
       .right-menu {
+        width: 20%;
         display: inline;
       }
     }
     .main {
-      width: $phone-width;
       .left {
         display: none;
+      }
+      .center {
+        width: 100%;
       }
       .right {
         display: none;

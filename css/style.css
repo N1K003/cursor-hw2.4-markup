@@ -1,16 +1,21 @@
 .page {
-  width: 1600px;
+    width: 80%;
   height: 600px;
   display: flex;
   flex-direction: column;
 }
 
+.page .text-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .page .title {
   display: flex;
-  justify-content: space-between;
+    justify-content: start;
   background: lightblue;
   height: 60px;
-  width: 1490px;
   margin: 5px;
 }
 
@@ -28,75 +33,67 @@
 }
 
 .page .main {
-  width: 1500px;
   display: flex;
-  justify-content: space-between;
-}
-
-.page .main .text-center {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+    justify-content: space-around;
 }
 
 .page .main .left {
   height: 150px;
-  width: 300px;
+    width: 20%;
   background: lightgray;
   margin: 5px;
 }
 
 .page .main .center {
   height: 150px;
-  width: 900px;
+    width: 60%;
   background: lightgray;
   margin: 5px;
 }
 
 .page .main .right {
   height: 150px;
-  width: 300px;
+    width: 20%;
   background: lightgray;
   margin: 5px;
 }
 
-@media screen and (max-width: 1200px) {
-  .page {
-    width: 1200px;
-  }
-  .page .title {
-    width: 1190px;
-  }
+@media screen and (max-width: 1000px) {
   .page .title .left-menu {
     display: inline;
   }
-  .page .main {
-    width: 1200px;
+
+    .page .main .left {
+        width: 30%;
+    }
+
+    .page .main .center {
+        width: 70%;
   }
   .page .main .right {
     display: none;
   }
 }
 
-@media screen and (max-width: 1000px) {
-  .page {
-    width: 1000px;
-  }
+@media screen and (max-width: 700px) {
   .page .title {
-    width: 900px;
+      justify-content: space-between;
   }
   .page .title .left-menu {
+      width: 20%;
     display: inline;
   }
   .page .title .right-menu {
+      width: 20%;
     display: inline;
-  }
-  .page .main {
-    width: 1000px;
   }
   .page .main .left {
     display: none;
   }
+
+    .page .main .center {
+        width: 100%;
+    }
   .page .main .right {
     display: none;
   }
